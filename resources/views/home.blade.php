@@ -1,23 +1,28 @@
-@extends('layouts.app')
+<!-- @extends('layouts.app') -->
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
+        <title>project web</title>
+
+        <script src="https://kit.fontawesome.com/f1d7f888de.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" type="text/css" href="/css/app.css">
+
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    </head>
+    <body>
+    <div id="app">
+        <div class="header">
+            <top-bar></top-bar>
+            <header-web></header-web>
+            <hero-section></hero-section>
         </div>
     </div>
-</div>
-@endsection
+    <script src="/js/app.js"></script>
+    </body>
+</html>
